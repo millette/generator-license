@@ -131,10 +131,10 @@ module.exports = class GeneratorLicense extends Generator {
     // License file
     const filename = this.props.license + '.txt';
     let author = this.props.name.trim();
-    if (this.props.email) {
+    if (this.props.email && this.props.email.trim()) {
       author += ' <' + this.props.email.trim() + '>';
     }
-    if (this.props.website) {
+    if (this.props.website && this.props.website.trim()) {
       author += ' (' + this.props.website.trim() + ')';
     }
 
